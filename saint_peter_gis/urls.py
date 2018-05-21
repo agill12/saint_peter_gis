@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from accounts import urls as accounts_urls
-from home.views import get_index,get_contacts,get_faq
+from home.views import get_index,get_contacts,get_faq,get_news
 from django.views.static import serve
 from django.conf import settings
 urlpatterns = [
@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^$', get_index, name='home'),
     url(r'^contacts', get_contacts, name='contacts'),
     url(r'^faq', get_faq, name='faq'),
+     url(r'^news', get_news, name='news'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]

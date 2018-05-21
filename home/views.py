@@ -16,3 +16,8 @@ def get_contacts(request):
 def get_faq(request):
     return render(request, "home/faq.html")
     
+    
+def get_news(request):
+     posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
+     return render(request, "home/news.html",{'posts':posts})
+    

@@ -1,0 +1,34 @@
+{% extends 'home/base.html' %}
+{% block content %}
+<div id="container-news">
+    <div class="row">
+        <div class ="col-sm-3">
+            <h2>All News</h2>
+         </div>   
+        </div>
+        <div class ="row postrow">
+      {% for post in posts %}
+      <div class="col-sm-3 index-post">
+          <div class="image-container">
+           <img src="{{MEDIA_URL}}{{post.image}}" class="index-post-image"></img> 
+          </div>
+          <div class="title-container">
+              {{ post.title }}
+              
+          </div>
+         
+      </div>
+      {% if forloop.counter|divisibleby:4 %}
+        </div><div class="row postrow">
+        {% endif %}
+       {% endfor %}  
+            
+        </div>
+       
+    
+</div>
+
+
+
+
+{% endblock %}
