@@ -1,1 +1,26 @@
 {% extends 'home/base.html' %}
+{% block content %}
+<div class="row"  id="search-bar">
+    <div class="col-sm-12">
+    <h3>I am looking for.....</h3>  
+    </div>
+    <div class="col-sm-12">
+
+
+    <form>
+    <div>
+     <label for="search-field"><i class="fas fa-search search-icon"></i></label>
+    <input type="search" id="search-field">
+    
+    </div>
+   </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class ="col-sm-3">
+            <h2>Top News</h2>
+        </div>
+    </div>
+</div>
+{% endblock %}
