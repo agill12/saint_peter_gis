@@ -16,26 +16,35 @@
    </form>
     </div>
 </div>
-<div class="container">
+<div id="container1">
     <div class="row">
         <div class ="col-sm-3">
             <h2>Top News</h2>
+         </div>   
+        </div>
+        <div class ="row postrow">
+      {% for post in posts %}
+      <div class="col-sm-3 index-post">
+          <div class="image-container">
+           <img src="{{MEDIA_URL}}{{post.image}}" class="index-post-image"></img> 
+          </div>
+          <div class="title-container">
+              {{ post.title }}
+              
+          </div>
+         
+      </div>
+      {% if forloop.counter|divisibleby:4 %}
+        </div><div class="row postrow">
+        {% endif %}
+       {% endfor %}  
             
         </div>
-        <div class ="col-sm-12">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue nisi eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris eu nulla ante. Vivamus at mattis sapien. Nunc massa velit, laoreet a lacus vitae, ultrices sodales nibh. Duis euismod sodales neque, in facilisis nisl dapibus vitae. Phasellus faucibus vitae odio vel convallis. Vestibulum in egestas quam. Sed tristique eros dolor, eget lacinia mi congue dictum. Vestibulum rhoncus mattis mi. Pellentesque ut sapien ex. Maecenas tellus lorem, feugiat eget massa sed, euismod cursus nunc. Donec dictum vestibulum vulputate.
-
-Phasellus mollis neque eget nibh fermentum, et congue nibh varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam eget ex viverra, pretium orci sit amet, mollis magna. Sed porta massa augue, sed vulputate ex cursus dictum. Cras dignissim lacinia urna eget tincidunt. Nam eu justo at tortor bibendum malesuada quis vitae tortor. Vestibulum posuere sollicitudin velit ac sagittis. Vivamus nec ullamcorper arcu. Proin porta tempor euismod.
-
-Praesent gravida mauris quis lacus iaculis, quis eleifend diam blandit. Fusce ultricies libero vitae ex feugiat dapibus. Praesent ac turpis in tortor rutrum vulputate ac at odio. Ut sollicitudin euismod ligula, nec venenatis arcu tempus et. Aliquam id libero arcu. Praesent ligula eros, tristique eget ante eget, hendrerit tincidunt nibh. Curabitur posuere lacinia lorem et auctor. Nullam varius in ex vitae imperdiet.
-
-Vivamus non interdum urna, sit amet tempus sem. Quisque porttitor, nibh non venenatis laoreet, justo nisl elementum nisl, sit amet mattis ex nunc nec lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec volutpat faucibus erat ut malesuada. Nullam et tristique nisl. In et metus non est porta dignissim. Nam vulputate quam quis augue aliquam, eget ornare enim viverra. Aenean pretium ac magna at aliquam. Aenean porta vitae augue vitae interdum. Pellentesque fringilla velit justo, ac pretium nibh condimentum nec.
-
-Duis tellus mauris, tincidunt eget efficitur eu, lobortis id ex. Fusce quis convallis elit. In mattis semper iaculis. Morbi id quam id enim placerat efficitur. Morbi sed pulvinar dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam purus lectus, congue vitae leo vel, scelerisque malesuada nisi. Aliquam pharetra, ex sodales fringilla placerat, nulla est auctor sem, vel dapibus tellus ligula nec libero. Nunc fermentum ultricies risus, sed tristique lectus malesuada vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis varius tortor ultrices porttitor elementum. Phasellus condimentum enim enim, nec facilisis quam aliquet eget. Nam eu enim eu nisi luctus maximus et id est. Aenean diam urna, porta ac augue sed, rutrum lobortis libero. Cras at enim consequat justo fringilla elementum.
-
-</p>
-            
+        <div class="row">
+            <div class="col-sm-3">
+                <button class="index-button">More Stories &nbsp <i class="fas fa-arrow-right"></i></button>
+            </div>
         </div>
-    </div>
+    
 </div>
 {% endblock %}

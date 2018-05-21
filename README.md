@@ -7,3 +7,4 @@
 ## Tech Stack
 This website was built using:
 * Django for the framework
+* Pillow for images
