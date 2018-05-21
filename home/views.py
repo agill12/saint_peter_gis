@@ -7,4 +7,8 @@ from django.utils import timezone
 def get_index(request):
      posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')[0:11]
      return render(request, "home/index.html",{'posts':posts})
+     
+     
+def get_contacts(request):
+    return render(request, "home/contact.html")
     

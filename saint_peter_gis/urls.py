@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from accounts import urls as accounts_urls
-from home.views import get_index
+from home.views import get_index,get_contacts
 from django.views.static import serve
 from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^$', get_index, name='home'),
+    url(r'^contacts', get_contacts, name='contacts'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
