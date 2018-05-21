@@ -12,3 +12,7 @@ def get_index(request):
 def get_contacts(request):
     return render(request, "home/contact.html")
     
+    
+def get_faq(request):
+    return render(request, "home/faq.html")
+    
