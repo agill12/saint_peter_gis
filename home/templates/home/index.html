@@ -31,7 +31,7 @@
       {% for post in posts %}
       <div class="col-sm-3 index-post">
           <div class="image-container">
-           <img src="{{MEDIA_URL}}{{post.image}}" class="index-post-image"></img> 
+            <a href='{% url 'post_detail' post.id %}'><img src="{{MEDIA_URL}}{{post.image}}" class="index-post-image"></img></a>
           </div>
           <div class="title-container">
                  <a href='{% url 'post_detail' post.id %}'>{{ post.title }}</a>

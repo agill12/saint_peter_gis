@@ -34,11 +34,13 @@ margin-bottom:0px
 }
 
 .social{
-    font-size:30px;
+    font-size:60px;
     color:@secondary-color;
     .seperator
 }
-
+.social-list{
+    list-style-type: none;
+}
 #nav2{
     background-color:@tertiary-color;
     border-radius:0;
@@ -74,6 +76,14 @@ margin-bottom:0px
 footer{
     height:50vh;
   background-color:black;
+  color:white;
+  line-height: 2 ;
+   font-family: 'Roboto Slab', serif;
+  
+   
+}
+.footer-about-us{
+      margin-left: 30px;
 }
 //INDEX PAGE STYLES   
 
@@ -90,7 +100,7 @@ footer{
    background-image: url("https://preview.c9users.io/agill1/saint_peter_gis/media/images/headerimage.jpg");
 
    
-   height: 50vh;
+   height: 60vh;
 
  
    background-attachment: fixed;
@@ -137,9 +147,8 @@ background-position: center;
     width:auto;
     padding-right:0px;
     padding-left:0px;
-    
-    border:1px solid grey;
-    border-radius:10px;
+    border:1px solid black;
+ 
     margin-bottom: 20px;
     margin-right: 10px;
     margin-left:4px;
@@ -149,8 +158,7 @@ background-position: center;
 .index-post-image{
     width:300px;
     height:250px;
-    border-top-right-radius:9px;
-     border-top-left-radius:9px;
+    
     
 }
 .title-container{
@@ -164,11 +172,18 @@ background-position: center;
     color:black;
     font-family: 'Roboto Slab', serif;
     text-transform: uppercase;
+    border-top:1px solid black;
     
     
 }
 
-
+.title-container a{
+    
+   
+    color:black;
+ 
+    
+}
 
 .index-button{
     height:50px;
@@ -219,16 +234,41 @@ hr{
  margin-top: 10px;
 }
 //CONTACT PAGE
+.contact-page{
+       margin-top: 20vh;
+    margin-bottom: 20vh;
+    font-family: 'Roboto Slab', serif;
+     line-height: 2;
+}
 .contact-div{
     border-right:1px solid grey;
+  
+}
+.contact-button{
+    margin-top: 20px;
+    font-family: 'Signika', sans-serif;
+}
+.contact-div-2{
+    margin-top: 5px;
+     
+    
 }
 //FAQ PAGE
 #faq{
-    border:1px solid grey;
+    font-family: 'Roboto Slab', serif;
+    line-height: 2;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
+//NEWS PAGE
+#container-news{
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+.news-index-post{
+    margin-right: 50px;
+}
 //MEDIA QUERIES
 //SMARTPHONE
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {

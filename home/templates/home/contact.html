@@ -1,6 +1,6 @@
 {% extends 'home/base.html' %}
 {% block content %}
-<div class="container">
+<div class="container contact-page">
     <div class="row">
         <div class="col-sm-3">
             <h3>Get In Touch</h3>
@@ -14,16 +14,46 @@
     <div class="row">
         <div class="col-sm-6 contact-div">
            
-         <form id="contact_form">
-             
-            
-            
-         </form>  
+       <form class="contact-form">
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationServer01">First name</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="First Name" required>
+      
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationServer02">Last name</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Last Name" required>
+      
+    </div>
+    <div class="col-md-6 mb-3">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    
+  </div>
+  <div class="col-md-12 mb-3">
+  <label for="comment">Message:</label>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+</div>
+
+<div class="col-md-12 mb-3">
+  <button class="btn btn-primary contact-button" type="submit">Submit form</button>
+  </div>
+</form>
         
        </div>
         </div>
-       
+      <div class="col-sm-6 contact-div-2">
+        <p>You can also send us a letter or give us a call anytime.<br>
+          Contact Info<br>
+          #123 Place<br>
+                    The City<br>
+                    Saint Peter<br>
+            Phone:1(234)567-890   
+        </p>
+    </div> 
     </div>
+    
 </div>
 
 
