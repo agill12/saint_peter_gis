@@ -1,0 +1,38 @@
+{% extends 'home/base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3 post-detail-title">
+       <p>{{post.title}} </p>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class ="col-sm-6 col-sm-offset-3 post-detail-image">
+       <img src="{{MEDIA_URL}}{{post.image}}" class="post-image"></img>  
+    </div>
+</div>
+<div class="row">
+    <div class ="col-sm-6 col-sm-offset-3 post-detail-content">
+       {{ post.content|linebreaksbr }}
+    </div>
+</div>
+
+<div class="row">
+    <div class ="col-sm-6 col-sm-offset-3">
+        <hr>
+       Published: {{post.created_date}}
+    </div>
+</div>
+<div class="row">
+    <div class ="col-sm-6 col-sm-offset-3 post-detail-author">
+        
+       Author: {{post.author}}
+    </div>
+</div>
+ 
+
+
+
+
+{% endblock %}

@@ -16,12 +16,14 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from accounts import urls as accounts_urls
+from blogs import urls as blogs_urls
 from home.views import get_index,get_contacts,get_faq,get_news
 from django.views.static import serve
 from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include(accounts_urls)),
+    url(r'^blogs/', include(blogs_urls)),
     url(r'^$', get_index, name='home'),
     url(r'^contacts', get_contacts, name='contacts'),
     url(r'^faq', get_faq, name='faq'),

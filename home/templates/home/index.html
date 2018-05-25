@@ -34,7 +34,7 @@
            <img src="{{MEDIA_URL}}{{post.image}}" class="index-post-image"></img> 
           </div>
           <div class="title-container">
-              {{ post.title }}
+                 <a href='{% url 'post_detail' post.id %}'>{{ post.title }}</a>
               
           </div>
          
