@@ -17,16 +17,19 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from accounts import urls as accounts_urls
 from blogs import urls as blogs_urls
-from home.views import get_index,get_contacts,get_faq,get_news
+from events import urls as events_urls
+from home.views import get_index,get_contacts,get_faq,get_news,get_events
 from django.views.static import serve
 from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^blogs/', include(blogs_urls)),
+    url(r'^events/', include(events_urls)),
     url(r'^$', get_index, name='home'),
     url(r'^contacts', get_contacts, name='contacts'),
     url(r'^faq', get_faq, name='faq'),
-     url(r'^news', get_news, name='news'),
+    url(r'^news', get_news, name='news'),
+    url(r'^events', get_events, name='events'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]

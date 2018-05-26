@@ -47,7 +47,7 @@
         </div>
         <div class="row">
             <div class="col-sm-3">
-                <button class="index-button">More News &nbsp <i class="fas fa-arrow-right"></i></button>
+                <a href="{% url 'news' %}"><button class="index-button">More News &nbsp <i class="fas fa-arrow-right"></i></button></a>
             </div>
         </div>
     
@@ -60,13 +60,13 @@
          </div>   
         </div>
         <div class ="row postrow">
-      {% for post in posts %}
+      {% for event in events %}
       <div class="col-sm-3 index-post">
           <div class="image-container">
-           <img src="{{MEDIA_URL}}{{post.image}}" class="index-post-image"></img> 
+           <a href='{% url 'event_detail' event.id %}'><img src="{{MEDIA_URL}}{{event.image}}" class="index-post-image"></img></a>
           </div>
           <div class="title-container">
-              {{ post.title }}
+             <a href='{% url 'event_detail' event.id %}'>{{ event.title }}</a>
               
           </div>
          
@@ -79,7 +79,7 @@
         </div>
         <div class="row">
             <div class="col-sm-3">
-                <button class="index-button">More Events &nbsp <i class="fas fa-arrow-right"></i></button>
+                 <a href="{% url 'events' %}"><button class="index-button">More Events &nbsp <i class="fas fa-arrow-right"></i></button></a>
             </div>
         </div>
     
