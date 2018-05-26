@@ -8,3 +8,7 @@
 This website was built using:
 * Django for the framework
 * Pillow for images
+
+
+## Acknowledgments
+* Logo made using www.designevo.com
