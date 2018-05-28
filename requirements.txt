@@ -14,3 +14,4 @@ python-dateutil==2.6.1
 pytz==2018.3
 s3transfer==0.1.13
 sqlparse==0.2.4
+whitenoise==3.3.1
