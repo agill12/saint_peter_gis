@@ -1,0 +1,1 @@
+web: gunicorn saint_peter_gis.wsgi:application
